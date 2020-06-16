@@ -15,9 +15,9 @@ BASE_URL = "https://www.thecocktaildb.com/api/"
   #binding.pry 
     end
  
-    #def self.get_coctails
+    def self.get_coctails
 
-    #end
+    end
 end
 
 
