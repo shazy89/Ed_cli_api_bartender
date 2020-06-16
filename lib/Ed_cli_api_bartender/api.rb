@@ -1,4 +1,5 @@
 
+
 class API
 BASE_URL = "https://www.thecocktaildb.com/api/"
 
@@ -7,17 +8,21 @@ BASE_URL = "https://www.thecocktaildb.com/api/"
        data = JSON.parse(response)
         data["drinks"].each {|coctail_data| 
          name =  coctail_data["strDrink"]
-         glass = coctail_data["strGlass"]
+         glass_type = coctail_data["strGlass"]
          instructions = coctail_data["strInstructions"]
          ingredients = "#{coctail_data["strIngredient1"]}, #{coctail_data["strIngredient2"]}, #{coctail_data["strIngredient3"]}, #{coctail_data["strIngredient4"]}"
-        }          
-       
-  #binding.pry 
-    end
+         Coctails.new(
+            name: name, 
+            glass_type: glass_type,
+            instructions: instructions,
+            ingredients: ingredients
+            ) }   
+       binding.pry             
+ end
  
-    def self.get_coctails
+    #def self.get_coctails
 
-    end
+    #end
 end
 
 
