@@ -11,13 +11,13 @@ BASE_URL = "https://www.thecocktaildb.com/api/"
          glass_type = coctail_data["strGlass"]
          instructions = coctail_data["strInstructions"]
          ingredients = "#{coctail_data["strIngredient1"]}, #{coctail_data["strIngredient2"]}, #{coctail_data["strIngredient3"]}, #{coctail_data["strIngredient4"]}"
-         Coctails.new(
+         Cocktails.new(
             name: name, 
             glass_type: glass_type,
             instructions: instructions,
             ingredients: ingredients
             ) }   
-       binding.pry             
+                    
  end
  
     #def self.get_coctails

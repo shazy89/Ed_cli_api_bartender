@@ -7,3 +7,4 @@ gem "rake", "~> 12.0"
 gem 'rest-client'
 gem 'pry'
 gem 'json'
+gem 'colorize'

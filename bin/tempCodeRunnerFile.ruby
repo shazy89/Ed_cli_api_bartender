@@ -1,14 +1,9 @@
-#!/usr/bin/env ruby
-
 require_relative "../lib/environment"
 API.get_coctails
 
 cli = Cli.new
+
+
+
 cli.run
-
-
-
-
-
-
 
