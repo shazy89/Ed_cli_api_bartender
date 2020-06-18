@@ -21,7 +21,7 @@ def to_continue
         Cocktails.index_names
         puts " "
         puts "--------------------------------------".green
-        puts "Thanks for your patience. Here is your coctail list"
+        puts "Thanks for your patience. Here is your cocktail list"
         puts "--------------------------------------".green
         
     elsif user_input == "exit" || user_input == "Exit"
@@ -46,7 +46,7 @@ end
 
 def menu
 
-puts "Welcome to the cocktails recepie site.."
+puts "Welcome to the cocktails recepie gem."
 puts "Do you want to see whats inside?"
 puts "To continue type >> #{"yes".light_green} << "
 puts "To quit the program type >> #{"exit".light_green} <<"
@@ -55,8 +55,8 @@ end
 
 def main_menu
     puts "--------------------------------------".green
-    puts "For cocktails recipes type the name of the cocktails"
-    puts "exemple:  #{"ABC".green} or #{"A1".green} or any cocktails from the list"
+    puts "For cocktail recipes type the name of the cocktails"
+    puts "exemple:  #{"ABC".green} or #{"A1".green} or any cocktail from the list"
     puts "To quit the program type >> #{"exit".green} <<"
     puts "--------------------------------------".green
     user_input = gets.strip
@@ -71,7 +71,7 @@ end
 
 def invalid_input
    puts "--------------------------------------".green
-    puts "Invalid Name".red
+    puts "Invalid Value".red
    puts "--------------------------------------".green
 end
 
@@ -83,7 +83,7 @@ def menu_2
     sleep(1)
     puts "--------------------------------------".green
     puts "To go back to the beginning press #{"1".blue} "
-    puts "For another cocktails recipes press #{"2".blue}"
+    puts "For another cocktail recipe press #{"2".blue}"
     puts "To exit the program type #{"exit".blue}"
     puts "--------------------------------------".green
     user_input = gets.strip
@@ -95,7 +95,7 @@ def menu_2
         goodbye
         exit
     else
-        puts "Invalid Name"
+        puts "Invalid Value".red
         menu_2
     end
 end
@@ -104,6 +104,5 @@ def head
     puts ">>>>>>>>>> #{"Cocktails Menu".green.italic.bold} <<<<<<<<"
     puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 end
-
 end
 

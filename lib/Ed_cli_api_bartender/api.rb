@@ -31,8 +31,3 @@ end
 
 
 
-#data["drinks"][0]["strDrink"]
-#ruby lib/Ed_cli_api_bartender/api.rb
-#./bin/coctails-api
-
-#data["drinks"][0].keys

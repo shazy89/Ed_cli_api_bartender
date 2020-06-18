@@ -5,8 +5,8 @@ class Cocktails
     attr_accessor :name, :glass_type, :instructions, :ingredients
 
     @@all = []
-
     def initialize(name: , glass_type:, instructions:, ingredients:)
+
         @name = name
         @glass_type = glass_type
         @instructions = instructions
