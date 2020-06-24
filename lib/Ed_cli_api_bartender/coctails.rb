@@ -28,10 +28,11 @@ class Cocktails
   end
 end
 
+
 def  self.coctail_recepies(user_input)
     
     name = user_input
-  find_coctail = Cocktails.all.find  {|coctail| coctail.name == name }
+  find_coctail = @@all.find  {|coctail| coctail.name == name }
     if find_coctail == nil
     puts "Invalid Name".red
    
