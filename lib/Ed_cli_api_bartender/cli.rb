@@ -19,13 +19,14 @@ end
     puts "--- ---- ---     ++++    ".green
     puts "---      ---     ++++    ".green
     puts "---      ---     ++++    ".green
-    "--------------------------------------".green
+    puts "--------------------------------------".green
     puts "Welcome to the cocktails recepie gem."
     puts "Do you want to see whats inside?"
     puts "--------------------------------------".green
     puts "To Search cocktail by name press #{"1".light_green} "
     puts "To List all cocktails by the letter A press #{"2".light_green}"
     puts "To list all cocktails by the letter B press #{"3".light_green}"
+    puts "You can type A for cocktails with the first letter A or B for cocktails with the first letter B "
     puts "--------------------------------------".green
     puts "To quit the program type >> #{"exit".light_green} <<"
     
@@ -52,6 +53,11 @@ end
         elsif user_input == "exit" || user_input == "Exit"
                 goodbye
                 exit
+        elsif  user_input == "A" || user_input == "B"     
+            head
+            API.get_coctails_by_letter(letter = user_input)
+            Cocktails.index_names
+            thanks
         else 
             invalid_input 
             to_continue
@@ -119,13 +125,13 @@ end
             puts "--------------------------------------".green
         end
 
+      
+
+    end
+      
 
 
 
 
 
-
-
-
-end
 
