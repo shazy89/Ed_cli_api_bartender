@@ -23,9 +23,13 @@ class Cocktails
     @@all
   end
 
-  def self.index_names
-
+  
+def self.index_names
       @@all.each_with_index do |name, index| puts "#{index + 1}. #{name.name}"
+  end
+end
+def self.search_by_first_letter(input)
+  self.all.select {|obj| obj.name.match(input) }.each do |name| puts name.name 
   end
 end
 

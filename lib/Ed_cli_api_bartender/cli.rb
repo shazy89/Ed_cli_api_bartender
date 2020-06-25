@@ -26,7 +26,9 @@ end
     puts "To Search cocktail by name press #{"1".light_green} "
     puts "To List all cocktails by the letter A press #{"2".light_green}"
     puts "To list all cocktails by the letter B press #{"3".light_green}"
-    puts "You can type A for cocktails with the first letter A or B for cocktails with the first letter B "
+    puts "You can type A for cocktails with the first letter #{"A".light_green} or #{"B".light_green} for cocktails with the first letter B "
+    puts "--------------------------------------".green
+    puts "For search by first letter type #{"Search".light_green} "
     puts "--------------------------------------".green
     puts "To quit the program type >> #{"exit".light_green} <<"
     
@@ -58,13 +60,20 @@ end
             API.get_coctails_by_letter(letter = user_input)
             Cocktails.index_names
             thanks
+            elsif user_input == "search" || user_input == "Search"
+              puts "Please type the first uppercase letter of the cocktails you are looking for " 
+              input = gets.strip
+              head
+              API.by_first_letter_new_way
+              Cocktails.search_by_first_letter(input)
+              thanks
         else 
             invalid_input 
             to_continue
             end
-            
+        end    
        
-        end
+        
     
         def main_menu
             puts "--------------------------------------".green
@@ -132,6 +141,6 @@ end
 
 
 
-
+#find = Cocktails.all.select {|obj| obj.name.match("A") }.each do |name| puts name.name end 
 
 
